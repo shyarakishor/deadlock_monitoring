@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  
+
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+
+<footer>
+    <div style="text-align: center;">
+    <p style='margin: 5px 25px 0 25px; color: [% footer_hash.color %];font-weight: [% footer_hash.style %]; font-size: [% footer_hash.size %]'>[% footer_hash.text %]</p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+<script type="text/javascript">
+
+var chart = new CanvasJS.Chart("chartContainer",
+    {
+      animationEnabled: true, 
+      zoomEnabled: true, 
+      markerEnabled: true,
+      title:{
+        text: "[% header_title %]"
+      },
+      axisX: {
+        interval:0,
+        valueFormatString: "[% value_format_string %]"
+      },
+      axisY:{
+        includeZero: false
+      },
+      data: [
+      {
+        type: "line",
+        markerType: "circle",
+        markerSize: 10,
+        dataPoints: [% data_json %]    
+      }
+      ]
+    });
+
+    chart.render();
+</script>
+
+</html>

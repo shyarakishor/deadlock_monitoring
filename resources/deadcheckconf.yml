@@ -1,0 +1,12 @@
+---
+header_title: Deadlock Monitoring
+file: /home/dell/Work/mohan/task1/CSV/test.csv
+fromdate: 04/01/2020 00:00
+todate: 04/30/2020 00:00
+graph_frequency: Day
+footer:
+  text: "DB Space Utilization"
+  style: bold
+  size: 14pt
+  color: red
+
